@@ -14,11 +14,11 @@
         <button class="btn btn-success mr-4" id="getJson">Get JSON</button>
         <button class="btn btn-warning mr-4" id="getApi">Get API Data</button>
 
-        <div id="content"></div>
-
         <hr>
 
-        <form id="addPosts">
+        <div id="content"></div>
+
+        <form id="addPosts" class="mt-4">
             <div class="form-group">
                 <input type="text" class="form-control" id="title" placeholder="Title">
             </div>
@@ -29,8 +29,6 @@
         </form>
     </div>
 
-    
-    
     <script>
         document.getElementById('getText').addEventListener('click', getText)
         document.getElementById('getJson').addEventListener('click', getJson)
@@ -63,13 +61,13 @@
                 .then((res) => res.json())
                 .then((data) => {
                     //console.log(data)
-                    let output = '<h2>Users</h2>';
+                    let output = '<h2 class="mb-3">Users</h2>';
                     data.forEach((user) => {
                         output += `
-                            <ul>
-                                <li>${user.id}</li>
-                                <li>${user.name}</li>
-                                <li>${user.email}</li>
+                            <ul class="list-group mb-3">
+                                <li class="list-group-item">${user.id}</li>
+                                <li class="list-group-item">${user.name}</li>
+                                <li class="list-group-item">${user.email}</li>
                             </ul>
                         `;
                     })
@@ -83,10 +81,10 @@
                 .then((res) => res.json())
                 .then((data) => {
                     //console.log(data)
-                    let output = '<h2>Posts</h2>';
+                    let output = '<h2 class="mb-3">Posts</h2>';
                     data.forEach((post) => {
                         output += `
-                            <div>
+                            <div class="card card-body mb-3">
                                 <h3>${post.title}</h3>
                                 <p>${post.body}</p>
                             </div>
