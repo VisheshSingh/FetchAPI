@@ -1,0 +1,17 @@
+[
+    {
+        "id":"1",
+        "name":"John Doe",
+        "email":"JohnDoe@gmail.com"
+    },
+    {
+        "id":"2",
+        "name":"Jessica Walter",
+        "email":"jessica@gmail.com"
+    },
+    {
+        "id":"3",
+        "name":"Brad Traversy",
+        "email":"Traversy@traversymedia.com"
+    }
+]
